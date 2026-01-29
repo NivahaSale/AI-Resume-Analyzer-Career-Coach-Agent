@@ -27,3 +27,8 @@ __pycache__/
 Thumbs.db
 
 unused/
+
+
+# Resume data (PRIVATE)
+src/data/resumes/
+*.pdf

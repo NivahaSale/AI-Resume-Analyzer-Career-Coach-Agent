@@ -2,11 +2,11 @@ import streamlit as st
 from analyzer import ResumeAnalyzer
 
 st.set_page_config(page_title="Dual ATS Analyzer", layout="wide")
-st.title("📊 Dual ATS Resume Analyzer")
+st.title(" Dual ATS Resume Analyzer")
 
 analyzer = ResumeAnalyzer()
 
-# ---------- UI Inputs ----------
+# UI Inputs 
 mode = st.radio(
     "Select ATS Analysis Mode",
     ["Resume Only (No Job Description)", "Resume vs Job Description"]
@@ -22,8 +22,8 @@ if mode == "Resume vs Job Description":
         placeholder="Paste target job description here..."
     )
 
-# ---------- Run Analysis ----------
-if st.button("🚀 Run ATS Analysis"):
+#  Run Analysis 
+if st.button("Run ATS Analysis"):
 
     if not uploaded_resume:
         st.warning("Please upload your resume.")
@@ -48,36 +48,36 @@ if st.button("🚀 Run ATS Analysis"):
                 st.stop()
             result = analyzer.analyze_with_job_description(resume_text, job_description)
 
-    # ---------- Results ----------
+    #  Results
     st.divider()
     score = result["overall_ats_score"]
 
     st.header(f"Overall ATS Score: {score}%")
     st.progress(score / 100)
 
-    st.subheader("📊 Parameter Breakdown")
+    st.subheader(" Parameter Breakdown")
     st.bar_chart(result["parameter_breakdown"])
 
-    # ---------- Insights ----------
+    #  Insights
     st.divider()
 
     if result["mode"] == "resume_vs_jd":
         col1, col2 = st.columns(2)
 
         with col1:
-            st.subheader("❌ Missing Keywords")
+            st.subheader(" Missing Keywords")
             if result["missing_keywords"]:
                 for kw in result["missing_keywords"]:
                     st.error(kw)
             else:
-                st.success("No major keywords missing 🎯")
+                st.success("No major keywords missing ")
 
         with col2:
-            st.subheader("📝 Action Plan")
+            st.subheader(" Action Plan")
             for step in result["action_plan"]:
-                st.write(f"👉 {step}")
+                st.write(f"{step}")
 
     else:
-        st.subheader("🛠 Improvement Suggestions")
+        st.subheader("Improvement Suggestions")
         for tip in result["improvement_suggestions"]:
-            st.write(f"👉 {tip}")
+            st.write(f" {tip}")
