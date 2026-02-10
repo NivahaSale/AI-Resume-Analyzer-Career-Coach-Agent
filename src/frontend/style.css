@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.nav-btn {
+    background: #38bdf8;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #94a3b8;
+}
+
+/* Upload Card */
+.upload-card {
+    background: #020617;
+    width: 350px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+}
+
+.upload-card input {
+    margin: 15px 0;
+}
+
+.upload-card button {
+    background: #38bdf8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Results */
+.results {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 700px;
+}
+
+.score-box {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info h4 {
+    margin: 15px 0 10px;
+}
+
+.info ul li {
+    background: #0f172a;
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+/* Auth Pages */
+.auth-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    background: #020617;
+    padding: 40px;
+    width: 320px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+.auth-card h2 {
+    margin-bottom: 10px;
+}
+
+.auth-card p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.switch {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.switch a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #1e293b;
+    background-color: #0f172a;   /* input background */
+    color: #e5e7eb;              /* typed text color */
+    font-size: 0.95rem;
+}
+
+.auth-card input::placeholder {
+    color: #94a3b8;
+}
+
+
+.auth-card input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.5);
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #e5e7eb;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+    filter: invert(1);
+}
+
+input[type="password"]::-ms-reveal {
+    filter: invert(1);
+}
+
+input[type="password"]::-ms-reveal:hover {
+    opacity: 0.8;
+}
+

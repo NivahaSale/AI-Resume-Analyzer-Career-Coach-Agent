@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h2>ResumeAI</h2>
+    <button class="nav-btn">Get Started</button>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Analyze Your Resume with AI</h1>
+    <p>Improve ATS score. Discover missing skills. Get hired faster.</p>
+</section>
+
+<!-- Upload Section -->
+<section class="upload-card">
+    <h3>Upload Your Resume</h3>
+    <input type="file" id="resume" accept=".pdf">
+    <button onclick="analyzeResume()">Analyze Resume</button>
+</section>
+
+<!-- Result Section -->
+<section id="results" class="results hidden">
+    <h3>Analysis Report</h3>
+    <div class="score-box">
+        <span id="score">0</span>/100 ATS Score
+    </div>
+
+    <div class="info">
+        <h4>Skills Found</h4>
+        <ul id="skills"></ul>
+
+        <h4>Recommendations</h4>
+        <ul id="tips"></ul>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ResumeAI · Built by Nivaha</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
